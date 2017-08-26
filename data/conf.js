@@ -1,5 +1,6 @@
 var config	=	{
-	mongohost:"mongodb://localhost:27017/weixin"
+	mongohost		:"mongodb://localhost:27017/weixin",
+	intervalformessage	:	300000//单位毫秒
 };
 exports.config  =       config;
 
