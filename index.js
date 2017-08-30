@@ -5,7 +5,6 @@ require('async-to-gen/register');
 const Weixinbot = require('weixinbot');
 const qrcode = require('qrcode-terminal');
 const functionlib	=	require('./lib/function');
-
 const config		=	require("./data/conf").config;
 const CODES		=	require("./data/conf").CODES;	
 const MongoDB           =       require("./lib/mongodb").MongoDB;
@@ -21,8 +20,6 @@ function usercode_username_handle(contactlist){
                 global.usercode_username[item.contactcode]     =       item.UserName;
         });
 }
-
-
 function initinterval(contactlist){
 	functionlib.intervalmessage(contactlist);
 	var ids		=	[];
@@ -65,7 +62,6 @@ bot.on('friend', (msg) => {
 		break;
 	}
 })
-
 bot.on('group', (msg) => {
 	msg.RecommendInfo		=	null;
 	msg.Group.MemberList       	=       null;
