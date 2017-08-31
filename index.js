@@ -5,7 +5,7 @@ require('async-to-gen/register');
 const Weixinbot = require('weixinbot');
 const qrcode = require('qrcode-terminal');
 const functionlib	=	require('./lib/function');
-const config		=	require("./data/conf").config;
+global.config		=	require("./data/conf").config;
 const CODES		=	require("./data/conf").CODES;	
 const MongoDB           =       require("./lib/mongodb").MongoDB;
 const MongoClient       =       new MongoDB(config.mongohost);
